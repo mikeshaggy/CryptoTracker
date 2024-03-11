@@ -5,7 +5,7 @@ target/
 src/data/
 .idea/
 ../.idea/
-src/main/java/app/CoinApi.java
+src/main/java/app/CoinAPI.java
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
