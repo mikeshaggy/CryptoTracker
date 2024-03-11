@@ -20,7 +20,7 @@ When investing in cryptocurrencies, I have always struggled to keep track of my 
 
 ## Description
 
-CryptoTracker is a simple Java application for tracking cryptocurrency portfolios. It allows users to manage multiple portfolios, add and delete trades, and view portfolio details. The application leverages the CoinAPI to fetch real-time exchange rates for cryptocurrencies.
+CryptoTracker is a user-friendly Java application designed for efficient cryptocurrency portfolio management. Users can seamlessly handle multiple portfolios, add or remove trades, and access detailed portfolio insights. Leveraging the CoinAPI, the application ensures real-time exchange rates for accurate and up-to-date cryptocurrency valuations.
 
 ## Technologies
 
