@@ -1,93 +1,118 @@
 # CryptoTracker
 
-CryptoTracker is a Java-based application designed to manage cryptocurrency portfolios. It allows users to track their trades, view portfolio details, and interact with a user-friendly interface.
-
-## Interactive README
-
-For an interactive version of this README, visit [mikeshaggy.github.io/CryptoTracker-CLI/](https://mikeshaggy.github.io/CryptoTracker-CLI/).
+When investing in cryptocurrencies, I have always struggled to keep track of my holdings. Although there are many apps developed for this but none of them met my requirements. I decided to create my own application, designed according to my needs. 
 
 ## Table of Contents
-- [Overview](#overview)
+
+- [Description](#description)
+- [Technologies](#technologies)
 - [Features](#features)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [System Requirements](#system-requirements)
-- [Installation](#installation)
 - [Usage](#usage)
-- [Testing](#testing)
-- [Dependencies](#dependencies)
+   - [Main Menu](#main-menu)
+   - [Portfolio Management](#portfolio-management)
+- [System Requirements](#system-requirements)
+- [Integration with CoinAPI](#integration-with-coinapi)
+- [Installation](#installation)
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
 - [Author](#author)
 
-## Overview
 
-CryptoTracker is a text-based RPG game developed in Java, created as a coursework assignment for the Object-Oriented Programming in Java course during the second semester of Computer Science studies at the Polish-Japanese Academy of Information Technology.
+## Description
+
+CryptoTracker is a simple Java application for tracking cryptocurrency portfolios. It allows users to manage multiple portfolios, add and delete trades, and view portfolio details. The application leverages the CoinAPI to fetch real-time exchange rates for cryptocurrencies.
+
+## Technologies
+
+Diving into the technical aspects, CryptoTracker employs the following technologies:
+
+- Java
+- Maven
+- CoinAPI
 
 ## Features
 
-- **Portfolio Management:** Track and manage cryptocurrency trades.
-- **Interactive User Interface:** JavaFX library provides a visually appealing UI.
-- **Real-Time Data:** Utilizes CoinAPI to fetch real-time exchange rates.
-- **Data Serialization:** Save and load portfolios for future reference.
+- **Portfolio Management:**
+  - Create new portfolios
+  - Delete existing portfolios
+  - View a list of available portfolios
 
-## Project Structure
+- **Trade Management:**
+  - Add new trades to a portfolio
+  - Delete trades from a portfolio
+  - View a list of all trades within a portfolio
 
-The project is organized into several key packages:
-
-- `app.model`: Contains classes representing the core model of the application, such as Portfolio and Trade.
-- `app`: Houses the main application class (App), user interface components, and additional utility classes.
-- `app.ui`: Handles user interface functionality.
-- `app.model`: Includes classes for managing API calls and fetching cryptocurrency data.
-- `app.model`: Manages data serialization and file operations.
-
-## Technologies Used
-
-- Java
-- JavaFX
-- Maven
-- Jackson Databind
-- JUnit 5
-- AssertJ
-- Mockito
-
-## System Requirements
-
-To run the application, ensure you have the following installed:
-
-- Java Development Kit (JDK) 21 or newer
-- Maven
-
-## Installation
-
-1. Clone the repository: `git clone https://github.com/your-username/CryptoTracker.git`
-2. Navigate to the project directory
-3. Install dependencies with Maven: `mvn clean install`
-4. Run the application: `mvn exec:java`
+- **Portfolio Details:**
+  - Display the total value of each portfolio in USD based on live rates
+  - Calculate the percentage change in portfolio value
 
 ## Usage
 
-- Launch the application with the `mvn exec:java` command.
-- Follow the on-screen menu to manage portfolios, add trades, and view portfolio details.
+1. **Main Menu:**
+     - Display portfolios
+     - Manage portfolio
+     - Create new portfolio
+     - Delete portfolio
+     - Exit
 
-## Testing
+2. **Portfolio Management:**
+     - Add a new trade
+        - Enter the coin name, quantity, and price.
+        - Confirm the trade details or cancel.
+     - Delete a trade
+        - Enter the trade ID you want to delete.
+        - Confirm the deletion or cancel.
+     - Show all trades
+        - Displays all the trades in a given portfolio, their unique ID, the name of the                     cryptocurrency, its quantity and its value at the time of the exchange
+     - Show portfolio details
+        - Displays the coin name, held quantity, and estimated value in USD for each trade.
+        - Shows the invested amount, total portfolio value, profit/loss, and percentage change.
+     - Return to the main menu
+     - Exit the application
 
-The project includes JUnit 5 tests to ensure the functionality of key components. Run tests with `mvn test`.
+## System Requirements
 
-## Dependencies
+To run CryptoTracker, ensure that your system meets the following requirements:
 
-- [Jackson Databind](https://github.com/FasterXML/jackson-databind)
-- [JUnit 5](https://junit.org/junit5/)
-- [AssertJ](https://assertj.github.io/doc/)
-- [Mockito](https://site.mockito.org/)
-- [Byte Buddy](https://bytebuddy.net/)
+- **Java:** Java Development Kit (JDK) 17 or later.
+- **Maven:** Ensure Maven is installed on your system. You can download Maven from [Apache Maven](https://maven.apache.org/download.cgi).
+
+## Integration with CoinAPI
+
+To integrate CoinAPI with CryptoTracker, follow these steps:
+
+1. **Get CoinAPI Key:**
+   - Obtain your CoinAPI key by signing up on the [CoinAPI website](https://www.coinapi.io/).
+
+2. **Configure CoinAPI Key:**
+   - Open the `CoinAPI.java` file in the `app` package.
+   - Locate the `API_KEY` field and replace the placeholder with your actual CoinAPI key.
+
+   ```java
+   private final String API_KEY = "YOUR_COINAPI_KEY";
+   ```
+
+## Installation
+
+Follow these steps to install and run CryptoTracker:
+
+1. Clone the repository: `git clone https://github.com/mikeshaggy/CryptoTracker-CLI.git`
+2. Navigate to the project directory
+3. Install dependencies with Maven: `mvn clean install`
+4. Run the app: `mvn exec:java`
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE). Feel free to modify and distribute it as needed. If you find any issues or have suggestions, please create an [issue](https://github.com/yourusername/CryptoTracker/issues) or submit a pull request.
+
+## Acknowledgments
+- [CoinAPI.io website](https://www.coinapi.io)
 
 ## Author
 
 **Michał Bagan**
 
+Feel free to contact me:
+
 - [GitHub](https://github.com/mikeshaggy)
-- [LinkedIn](www.linkedin.com/in/michalbagan/)
+- [LinkedIn](www.linkedin.com/in/michalbagan)

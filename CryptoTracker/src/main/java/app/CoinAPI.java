@@ -12,7 +12,7 @@ import java.net.URL;
 import java.net.URI;
 
 public class CoinAPI implements Serializable {
-    private final String API_KEY = "302F2A7C-47D7-4049-AB47-BB36C318CF27";
+    private final String API_KEY = "YOUR_COINAPI_KEY";
 
     private String getCoinData(String coinName) throws IOException {
         String apiUrl = "https://rest.coinapi.io/v1/exchangerate/%s/USD".formatted(coinName);
