@@ -116,7 +116,7 @@ public class Portfolio implements Serializable {
         investedAmount -= trade.getPrice() * trade.getQuantity();
     }
 
-    private int getCoinOccurrences(String coinName) {
+    protected int getCoinOccurrences(String coinName) {
         coinName = coinName.toUpperCase();
         int result = 0;
         for (Trade trade : trades) {
@@ -126,6 +126,10 @@ public class Portfolio implements Serializable {
         }
 
         return result;
+    }
+
+    void purgeDb() {
+        trades.clear();
     }
 
     public String getName() {
